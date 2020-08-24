@@ -1,3 +1,8 @@
+#Rob's Original Version - Conversion To Float/Int Doesn't work on 'None'
+
+
+
+
 from bs4 import BeautifulSoup as Soup
 import requests
 from pandas import DataFrame
@@ -37,10 +42,10 @@ df = DataFrame(list_of_parsed_rows)
 df.columns = ['Player Name', 'Team', 'Age', 'Position', 'Games Played', 'Games Started', 'QBStartRecord', 'Completions', 'Attempts', 'Completion %', 'Passing Yards', 'Passing TDs', 'TD %', 'Interceptions', 'Int %', '1D', 'Lng', 'Y/A', 'AY/A', 'Y/C', 'Y/G', 'Rate', 'QBR', 'Sacked', 'SackYds', 'NY/A', 'ANY/A', 'Sack%', '4QComebacks', 'GWD']
 #manually enter headers (easiest way)
 
-float_cols =['Completion %', 'Int %', 'Y/A', 'AY/A', 'Y/C', 'Y/G', 'Rate', 'QBR', 'NY/A', 'ANY/A', 'Sack%']
-int_cols =['Age', 'Games Played', 'Games Started', 'Completions', 'Attempts', 'Passing Yards', 'Passing TDs', 'Interceptions', '1D', 'Lng', 'Sacked', 'SackYds', '4QComebacks', 'GWD']
-df[float_cols] = df[float_cols].astype(float)
-df[int_cols] = df[int_cols].astype(int)
+#float_cols =['Completion %', 'Int %', 'Y/A', 'AY/A', 'Y/C', 'Y/G', 'Rate', 'QBR', 'NY/A', 'ANY/A', 'Sack%']
+#int_cols =['Age', 'Games Played', 'Games Started', 'Completions', 'Attempts', 'Passing Yards', 'Passing TDs', 'Interceptions', '1D', 'Lng', 'Sacked', 'SackYds', '4QComebacks', 'GWD']
+#df[float_cols] = df[float_cols].astype(float)
+#df[int_cols] = df[int_cols].astype(int)
 #structure non-string data
 
 #df.drop('columnname', axis=1, inplace=True)
